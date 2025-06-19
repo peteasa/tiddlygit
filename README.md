@@ -1,5 +1,7 @@
 # Introduction
 
+/!\ This version has some bugs/problems, please contact me if you want to try it and I will update it /!\
+
 A TiddlyWiki/TiddlyBob configured to work collaboratively through git.
 I did it for my personal use case, and it is probably not the correct way to do it, but feel free to try it or to take some parts of it as an inspiration.
 The goal is to have a button inside the Wiki that you can click to commit and push your changes and which take care of conflicts.
