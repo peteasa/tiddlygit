@@ -4,6 +4,7 @@ A TiddlyWiki/TiddlyBob configured to work collaboratively through git.
 I did it for my personal use case, and it is probably not the correct way to do it, but feel free to try it or to take some parts of it as an inspiration.
 The goal is to have a button inside the Wiki that you can click to commit and push your changes and which take care of conflicts.
 
+
 ## Notes
 
 The TiddlyWiki server will be closed and restarted each time you use the synchronization button. This was necessary because otherwise the Bob plugin could modify the files during the git commands, leading to data lost.
@@ -24,6 +25,16 @@ You can then simply remove/edit these tiddlers before commiting/pushing again wi
 
 Some particular tiddlers are also completely ignored, see the .gitignore file.
 
+
+## Dependencies
+
+You will need python3 for tiddly-merge.py to run.
+To test if everything is ok :
+
+```console
+$ tiddly-merge.py
+Should take 4 arguments : %O %A %B
+```
 
 # Installation
 
