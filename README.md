@@ -91,4 +91,4 @@ git config credential.helper 'cache --timeout=3600'
 Then start the server with `run.sh` and  open http://localhost:7070/ in a WebBrowser.
 (you can change the port in Wikis/BobWiki/settings/settings.json)
 
-While you working on you Wiki, you can click the button with a GitHub icon to synchronize your work with the remote repository (you should reload the browser page after doing it to get the last modifications).
+While you are working on your wiki, you can click the button with a GitHub icon to synchronize your work with the remote repository (you should reload the browser page after doing it to get the last modifications).
