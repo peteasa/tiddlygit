@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "Kill Wikis/planning"
-pid=$(pgrep -ofa -x "node ./node_modules/tiddlywiki/tiddlywiki.js Wikis/planning/ --wsserver" | cut -d" " -f 1)
+pid=$(pgrep -ofa -x "node ./node_modules/tiddlywiki/tiddlywiki.js Wikis/BobWiki/ --wsserver" | cut -d" " -f 1)
 if [ "$pid" != "" ]
 then
 	kill "$pid"
