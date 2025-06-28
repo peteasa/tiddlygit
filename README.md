@@ -66,14 +66,14 @@ update.sh
 
 # Usage
 
-## Only having to enter credential one time
-### If you use SSH to connect to your depot (preferred way)
+## Only having to enter your credential one time
+### If you use SSH to connect to your repo (preferred way)
 
 ```
 eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa
 ```
 
-### If you use you login and password to connect to your depot
+### If you use your login and password to connect to your repo
 
 ```
 git config --global credential.helper store
