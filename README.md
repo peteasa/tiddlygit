@@ -1,6 +1,6 @@
 # Introduction
 
-/!\ This version has some bugs/problems, please contact me if you want to try it and I will update it /!\
+/!\ This version has some bugs/problems, please contact me if you want to try it and I will update itc /!\
 
 A TiddlyWiki/TiddlyBob configured to work collaboratively through git.
 I did it for my personal use case, and it is probably not the correct way to do it, but feel free to try it or to take some parts of it as an inspiration.
