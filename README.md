@@ -12,6 +12,8 @@ After a completed synchronization, you should reload the browser page (F5) to ge
 
 If there is any problem during the synchronization, it will stop, and you will have to look inside the console what is happening with git.
 
+Don't hesitate to create an issue if you have a question or if there is any problem.
+
 ## Merge and Conflicts
 
 First any conflicts on these fields will simply be ignored: "modified", "created", "nouvelle-tache", "fields-to-show", "date-start", "date-start-temp", "days-count", "days-count-temp", "show-day-record".
@@ -45,6 +47,8 @@ installation.sh
 ## Update
 
 ```
+git remote add upstream https://github.com/dionisos2/tiddlygit.git
+git pull upstream
 update.sh
 ```
 
