@@ -48,7 +48,8 @@ installation.sh
 
 ```
 git remote add upstream https://github.com/dionisos2/tiddlygit.git
-git pull upstream
+git fetch upstream
+git merge upstream
 update.sh
 ```
 
