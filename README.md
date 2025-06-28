@@ -1,10 +1,16 @@
 # Introduction
 
-/!\ This version has some bugs/problems, please contact me if you want to try it and I will update itc /!\
-
 A TiddlyWiki/TiddlyBob configured to work collaboratively through git.
 I did it for my personal use case, and it is probably not the correct way to do it, but feel free to try it or to take some parts of it as an inspiration.
 The goal is to have a button inside the Wiki that you can click to commit and push your changes and which take care of conflicts.
+
+## Notes
+
+The TiddlyWiki server will be closed and restarted each time you use the synchronization button. This was necessary because otherwise the Bob plugin could modify the files during the git commands, leading to data lost.
+
+After a completed synchronization, you should reload the browser page (F5) to get the last changes loaded inside it.
+
+If there is any problem during the synchronization, it will stop, and you will have to look inside the console what is happening with git.
 
 ## Merge and Conflicts
 
@@ -44,12 +50,21 @@ update.sh
 
 # Usage
 
+## Only having to enter credential one time
+### If you use SSH to connect to your depot (preferred way)
+
 ```
-eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa # This is used so you don't have to go in the console each time you commit to write your passphrase.
-run.sh
+eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa
 ```
 
-Then open http://localhost:7070/ in a WebBrowser.
+### If you use you login and password to connect to your depot
+
+```
+git config --global credential.helper store
+```
+This will create a `~/.git-credentials` where the password is in clear (https://git-scm.com/docs/gitcredentials).
+
+Then start the server with `run.sh` and  open http://localhost:7070/ in a WebBrowser.
 (you can change the port in Wikis/BobWiki/settings/settings.json)
 
 Then you can click the button with a GitHub icon to synchronize your work with the remote repository (you should reload the browser page after doing it to get the last modifications).
