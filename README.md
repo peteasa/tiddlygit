@@ -80,7 +80,15 @@ git config --global credential.helper store
 ```
 This will create a `~/.git-credentials` where the password is in clear (https://git-scm.com/docs/gitcredentials).
 
+If you don't want your password to be stored in plain text, you can use this instead :
+
+```
+git config credential.helper 'cache --timeout=3600'
+```
+
+## Starting the server
+
 Then start the server with `run.sh` and  open http://localhost:7070/ in a WebBrowser.
 (you can change the port in Wikis/BobWiki/settings/settings.json)
 
-Then you can click the button with a GitHub icon to synchronize your work with the remote repository (you should reload the browser page after doing it to get the last modifications).
+While you working on you Wiki, you can click the button with a GitHub icon to synchronize your work with the remote repository (you should reload the browser page after doing it to get the last modifications).
