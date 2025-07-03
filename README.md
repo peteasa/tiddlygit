@@ -28,13 +28,9 @@ Some particular tiddlers are also completely ignored, see the .gitignore file.
 
 ## Dependencies
 
-You will need python3 for tiddly-merge.py to run.
-To test if everything is ok :
-
-```console
-$ tiddly-merge.py
-Should take 4 arguments : %O %A %B
-```
+* nodejs (pacman -S nodejs)
+* npm (pacman -S npm)
+* python3 (pacman -S python)
 
 # Installation
 

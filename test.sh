@@ -21,8 +21,8 @@ cleanup() {
   echo "🧹 Cleaning up..."
 	set +e
   kill_tiddlywiki
-  echo "Deleting $WORKDIR"
-  rm -rf "$WORKDIR"
+  # echo "Deleting $WORKDIR"
+  # rm -rf "$WORKDIR"
   echo "✅ Test completed successfully"
 }
 trap cleanup EXIT
