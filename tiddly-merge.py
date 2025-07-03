@@ -93,7 +93,7 @@ def add_to(field, tiddler, value):
 def run(command):
 	return subprocess.run(command, stdout=subprocess.PIPE).stdout.decode('utf-8')
 
-def create_conflit_tiddler(env):
+def create_conflict_tiddler(env):
 	ours_user = run(["git", "config", "user.name"])
 	theirs_user = run(["git", "show", "-s", "--format=%an", "remotes/origin/HEAD"])
 
@@ -102,13 +102,13 @@ def create_conflit_tiddler(env):
 	suffix = str(hash(env.theirs_str))
 	theirs_title = ours_title+suffix
 
-	ours_tiddler = ours_tiddler + f"\n\nCONFLIT : [[{theirs_title}]] (modified by : {theirs_user})"
+	ours_tiddler = ours_tiddler + f"\n\nCONFLICT : [[{theirs_title}]] (modified by : {theirs_user})"
 	set_tiddler(env, ours_tiddler)
 
 	theirs_tiddler = env.theirs_str
 	theirs_tiddler = add_to("title", theirs_tiddler, suffix)
-	theirs_tiddler = add_to("tags", theirs_tiddler, " GitConflit")
-	theirs_tiddler += f"\n\nCONFLIT : [[{ours_title}]] (modified by : {ours_user})"
+	theirs_tiddler = add_to("tags", theirs_tiddler, " GitConflict")
+	theirs_tiddler += f"\n\nCONFLICT : [[{ours_title}]] (modified by : {ours_user})"
 	create_tiddler(env, theirs_title+".tid", theirs_tiddler)
 
 
@@ -117,7 +117,7 @@ def main(env):
 	print("tid_path: ", os.path.realpath(env.tid_path))
 
 	if check_diff(env):
-		create_conflit_tiddler(env)
+		create_conflict_tiddler(env)
 
 	return 0
 
