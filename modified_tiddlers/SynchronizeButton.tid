@@ -1,6 +1,6 @@
 created: 20240204201837820
 modified: 20240217233618246
-tags: $:/tags/PageControls Méta
+tags: $:/tags/PageControls Meta
 title: SynchronizeButton
 
 <$button class=<<tv-config-toolbar-class>> >
