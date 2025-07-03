@@ -3,8 +3,8 @@
 # See https://github.com/OokTech/TW5-Bob#manual-version
 
 echo "Install tiddlywiki"
-npm install tiddlywiki
-npm install node-notifier
+npm --prefix=./ install tiddlywiki
+npm --prefix=./ install node-notifier
 echo "Clone all submodules"
 git submodule init
 git submodule update
