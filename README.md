@@ -32,10 +32,11 @@ Some particular tiddlers are also completely ignored, see the .gitignore file.
 * nodejs
 * npm
 * python3
+* libnotify
 
 ### On Archlinux
 
-`sudo pacman -S git nodejs npm python`
+`sudo pacman -S git nodejs npm python libnotify`
 
 # Installation
 
@@ -61,7 +62,7 @@ installation.sh
 ```
 git remote add upstream https://github.com/dionisos2/tiddlygit.git
 git fetch upstream
-git merge upstream
+git merge upstream/master
 update.sh
 ```
 
