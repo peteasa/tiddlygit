@@ -20,7 +20,7 @@ Don't hesitate to create an issue if you have a question or if there is any prob
 First any conflicts on these fields will simply be ignored: "modified", "created", "nouvelle-tache", "fields-to-show", "date-start", "date-start-temp", "days-count", "days-count-temp", "show-day-record".
 (see tiddly-merge.py)
 The goal is to avoid useless conflicts for unimportant field (in particular the field "modified")
-Then, any tiddler with remaining conflicts will be duplicated (one for each version), with added link at the bottom in each one referencing the other one, they will also be tagged with the GitConflit tag.
+Then, any tiddler with remaining conflicts will be duplicated (one for each version), with added link at the bottom in each one referencing the other one, they will also be tagged with the GitConflict tag.
 You can then simply remove/edit these tiddlers before commiting/pushing again with the GitHub button.
 
 Some particular tiddlers are also completely ignored, see the .gitignore file.
