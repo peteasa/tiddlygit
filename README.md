@@ -28,9 +28,14 @@ Some particular tiddlers are also completely ignored, see the .gitignore file.
 
 ## Dependencies
 
-* nodejs (pacman -S nodejs)
-* npm (pacman -S npm)
-* python3 (pacman -S python)
+* git
+* nodejs
+* npm
+* python3
+
+### On Archlinux
+
+`sudo pacman -S git nodejs npm python`
 
 # Installation
 
