@@ -26,7 +26,7 @@ You can then simply remove/edit these tiddlers before commiting/pushing again wi
 Some particular tiddlers are also completely ignored, see the .gitignore file.
 
 
-## Dependencies
+# Dependencies
 
 * git
 * nodejs
@@ -34,13 +34,30 @@ Some particular tiddlers are also completely ignored, see the .gitignore file.
 * python3
 * libnotify
 
-### On Archlinux
+## On Archlinux
 
 `sudo pacman -S git nodejs npm python libnotify`
 
-### On Ubuntu
+## On Ubuntu
 
 `sudo apt install git-all nodejs npm python3 libnotify-bin notify-osd`
+
+# Test
+
+To test that everything will work correctly on your computer, run the command `./test.sh`, it should end with these messages :
+
+```console
+✅ Merge driver generated the following files:
+Wikis/BobWiki/tiddlers/test-766755633815162457.tid
+Deleting /home/dionisos/projets/programmation/tiddlygit/test_tmp
+Terminated
+✅ Test completed successfully
+🧹 Cleaning up...
+Killing tiddlywiki.jl
+PID not found
+```
+
+If the test doesn't complete successfully, please verify the dependencies, and then create an issue.
 
 # Installation
 

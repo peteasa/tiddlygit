@@ -8,7 +8,7 @@ ORIGIN="$WORKDIR/tiddlygit-origin.git"
 CLONE="$WORKDIR/tiddlygit"
 
 kill_tiddlywiki() {
-  echo "Killing tiddlywiki.jl"
+	echo "Killing tiddlywiki.jl"
   pid=$(pgrep -ofa -x "node ./node_modules/tiddlywiki/tiddlywiki.js Wikis/BobWiki/ --wsserver" | cut -d" " -f 1)
   if [ -n "$pid" ]; then
     kill "$pid"
@@ -21,9 +21,6 @@ cleanup() {
   echo "🧹 Cleaning up..."
 	set +e
   kill_tiddlywiki
-  # echo "Deleting $WORKDIR"
-  # rm -rf "$WORKDIR"
-  echo "✅ Test completed successfully"
 }
 trap cleanup EXIT
 
@@ -89,7 +86,7 @@ kill_tiddlywiki
 
 # 🕵️‍♂️ Verify the file created by tiddly-merge
 echo "📁 Searching for tiddlers tagged with GitConflict..."
-CONFLICT_FILES=$(grep -lR "GitConflict" Wikis/BobWiki/tiddlers/) || true
+CONFLICT_FILES=$(grep -lR "GitConflict" Wikis/BobWiki/tiddlers/ | grep -v "/GitConflict.tid$" || true)
 
 if [[ -z "${CONFLICT_FILES:-}" ]]; then
   echo "❌ No tiddler with GitConflict tag found — merge driver did not work"
@@ -98,3 +95,6 @@ fi
 
 echo "✅ Merge driver generated the following files:"
 echo "$CONFLICT_FILES"
+echo "Deleting $WORKDIR"
+rm -rf "$WORKDIR"
+echo "✅ Test completed successfully"
