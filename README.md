@@ -38,6 +38,10 @@ Some particular tiddlers are also completely ignored, see the .gitignore file.
 
 `sudo pacman -S git nodejs npm python libnotify`
 
+### On Ubuntu
+
+`sudo apt install git-all nodejs npm python3 libnotify-bin notify-osd`
+
 # Installation
 
 Preferred way :
